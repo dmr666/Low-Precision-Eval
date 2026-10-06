@@ -25,6 +25,9 @@ DRAFT_TEXT = DRAFT.read_text(encoding="utf-8").replace("\u2212", "-")
 evidence_text = []
 for p in [C.OUT / "numbers_sheet.md", C.OUT / "paper_tables.md", C.OUT / "si_tables.md",
           C.OUT / "tables.md", C.OUT / "seed_extension_report.md",
+          C.OUT / "latency_session_compare.md",
+          C.OUT / "latency_session_20261006_1803.csv",
+          C.OUT / "latency_session_20261006_2119.csv",
           C.PROJ / "_log_fix2.log", C.PROJ / "_log_latency_all.log",
           C.PROJ / "_log_seed_extension_n.log",
           C.PROJ / "_log_full_matrix.log", C.PROJ / "_log_calib_ablation.log"]:

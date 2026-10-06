@@ -3,11 +3,14 @@ calib\neu_train200.txt	3951
 calib\README.md	347
 figs\fig_pareto.pdf	24200
 figs\fig_pareto.png	164670
-MANIFEST.tsv	5385
-README.md	6195
+MANIFEST.tsv	15432
+README.md	7316
 results\calib_ablation.csv	1092
 results\export_sizes.csv	4796
 results\latency.csv	12037
+results\latency_session_20261006_1803.csv	12037
+results\latency_session_20261006_2119.csv	12068
+results\latency_session_compare.md	2083
 results\numbers_sheet.md	7918
 results\paper_tables.md	5860
 results\perclass\gc10_n_fp16_seed13.json	530
@@ -97,6 +100,7 @@ results\significance.csv	1743
 results\stats.csv	2582
 results\tables.md	5586
 results\weights_manifest.csv	5044
+scripts\compare_latency_sessions.py	5928
 scripts\extract_weights.py	6129
 scripts\make_coco_gt.py	7036
 scripts\make_fig_pareto.py	4784
@@ -111,9 +115,9 @@ scripts\ptq_eval.py	11367
 scripts\ptq_export.py	6288
 scripts\ptq_latency.py	7330
 scripts\ptq_stats.py	7192
-scripts\remeasure_latency_all.sh	3419
+scripts\remeasure_latency_all.sh	4627
 scripts\summarize_matrix.py	7482
-scripts\verify_draft_numbers.py	4083
+scripts\verify_draft_numbers.py	4244
 weights\gc10_n_base_seed13.pt	6235121
 weights\gc10_n_base_seed2024.pt	6235121
 weights\gc10_n_base_seed42.pt	6235121
