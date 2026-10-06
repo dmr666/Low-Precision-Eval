@@ -1,10 +1,10 @@
 calib\gc10_train200.txt	5680
 calib\neu_train200.txt	3951
 calib\README.md	347
-figs\fig_pareto.pdf	24200
-figs\fig_pareto.png	164670
-MANIFEST.tsv	15432
-README.md	7316
+figs\fig_pareto.pdf	17486
+figs\fig_pareto.png	203945
+MANIFEST.tsv	5879
+README.md	7508
 results\calib_ablation.csv	1092
 results\export_sizes.csv	4796
 results\latency.csv	12037
@@ -93,6 +93,7 @@ results\perclass\neu_s_int8static_seed2024.json	382
 results\perclass\neu_s_int8static_seed42.json	382
 results\perclass\neu_s_int8static_seed7.json	382
 results\perclass\neu_s_int8static_seed99.json	380
+results\realtime_budget.md	2130
 results\results.csv	11212
 results\seed_extension_report.md	3693
 results\si_tables.md	3061
@@ -103,9 +104,10 @@ results\weights_manifest.csv	5044
 scripts\compare_latency_sessions.py	5928
 scripts\extract_weights.py	6129
 scripts\make_coco_gt.py	7036
-scripts\make_fig_pareto.py	4784
+scripts\make_fig_pareto.py	5644
 scripts\make_numbers_sheet.py	10287
 scripts\make_paper_tables.py	12180
+scripts\make_realtime_budget.py	3389
 scripts\make_seed_report.py	7407
 scripts\make_si_tables.py	5881
 scripts\preflight.py	4155
@@ -117,7 +119,7 @@ scripts\ptq_latency.py	7330
 scripts\ptq_stats.py	7192
 scripts\remeasure_latency_all.sh	4627
 scripts\summarize_matrix.py	7482
-scripts\verify_draft_numbers.py	4244
+scripts\verify_draft_numbers.py	4285
 weights\gc10_n_base_seed13.pt	6235121
 weights\gc10_n_base_seed2024.pt	6235121
 weights\gc10_n_base_seed42.pt	6235121

@@ -3,7 +3,7 @@
 
 四个面板:gc10 n / gc10 s / neu n / neu s。
 x = ONNX Runtime CPU 中位延迟(对数轴),y = val mAP50,点面积 ∝ 模型体积,虚线 = 非支配前沿(Pareto)。
-同时导出 PNG(300 dpi)与 PDF(矢量,投稿用)。
+同时导出 PNG(600 dpi 备选)与 PDF(矢量,投稿主用)。
 
 用法: python scripts/make_fig_pareto.py
 """
@@ -15,6 +15,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FixedLocator
 
 import ptq_common as C
 
@@ -22,6 +23,9 @@ FIGDIR = C.PROJ / "figs"
 LABEL = {"fp32": "FP32", "fp16": "FP16", "int8dyn": "INT8-dynamic", "int8static": "INT8-static"}
 COLOR = {"fp32": "#1f3864", "fp16": "#2e7d32", "int8dyn": "#c62828", "int8static": "#ef6c00"}
 MARK = {"fp32": "o", "fp16": "s", "int8dyn": "^", "int8static": "D"}
+# 显式刻度:每格只有 ~1.5 in 宽,只放 3 个刻度(100/500/2000),否则数字必然互相压叠;
+# 数据点最远到 ~3200 ms,超出刻度也无妨(matplotlib 会自动扩展显示范围)
+XTICKS = [100, 500, 2000]
 
 
 def load_rows():
@@ -65,7 +69,9 @@ def pareto(points):
 def main() -> None:
     FIGDIR.mkdir(parents=True, exist_ok=True)
     rows = load_rows()
-    fig, axes = plt.subplots(2, 2, figsize=(9.2, 6.4), dpi=150)
+    # 最终以 174 mm(整页宽)排版,figsize 就取 6.8 in,缩放比≈1.0 → 图内字号即最终字号(Springer 要求 8–12 pt)
+    # 单栏排版:栏宽 85 mm ≈ 3.35 in,figsize 取 3.4 in → 缩放≈1.0,图内字号即最终字号
+    fig, axes = plt.subplots(2, 2, figsize=(3.4, 3.3), dpi=150)
     order = [("gc10", "n"), ("gc10", "s"), ("neu", "n"), ("neu", "s")]
     for ax, (ds, sc) in zip(axes.ravel(), order):
         pts = [r for r in rows if r["dataset"] == ds and r["scale"] == sc]
@@ -80,25 +86,30 @@ def main() -> None:
                        color=COLOR.get(r["precision"], "0.4"),
                        marker=MARK.get(r["precision"], "o"),
                        edgecolor="white", linewidth=0.8, zorder=3)
-            ax.annotate(LABEL.get(r["precision"], r["precision"]),
-                        (r["lat"], r["mAP50"]), textcoords="offset points",
-                        xytext=(7, -3), fontsize=7.5, color=COLOR.get(r["precision"], "0.3"))
+            ax.scatter([], [], color=COLOR.get(r["precision"], "0.4"),
+                       marker=MARK.get(r["precision"], "o"), edgecolor="white",
+                       linewidth=0.8, label=LABEL.get(r["precision"], r["precision"]))
         front = pareto(pts)
         if len(front) > 1:
             ax.plot([p["lat"] for p in front], [p["mAP50"] for p in front],
                     ls="--", lw=0.9, color="0.5", zorder=2,
                     label="Pareto front")
         ax.set_xscale("log")
-        ax.set_xlabel("CPU latency, median (ms, ONNX Runtime, 4 threads, 640)", fontsize=8)
+        ax.set_xticks(XTICKS)
+        ax.set_xticklabels([f"{v:g}" for v in XTICKS], fontsize=7)
+        ax.xaxis.set_minor_locator(FixedLocator([]))   # 关掉次刻度标签
+        ax.set_xlabel("median latency (ms)", fontsize=8)   # 缩短:面板仅 1.5 in 宽,长标签会越过栏边
         ax.set_ylabel("val mAP50", fontsize=8)
-        ax.set_title(f"{ds.upper()} · YOLOv8{sc}", fontsize=9.5)
-        ax.grid(alpha=0.25, which="both", ls=":")
+        ax.set_title(f"{ds.upper()} · YOLOv8{sc}", fontsize=8.5)
+        ax.grid(alpha=0.25, which="major", ls=":")
+        if (ds, sc) == ("gc10", "n"):
+            ax.legend(fontsize=6.5, frameon=False, loc="lower right", handletextpad=0.2)
         ax.tick_params(labelsize=7.5)
-    fig.suptitle("Accuracy–latency–size trade-offs of low-precision deployment "
-                 "(steel surface defect detection, 3 seeds)", fontsize=10.5)
-    fig.tight_layout(rect=(0, 0, 1, 0.96))
+    # suptitle 去掉:同样的信息写在图题里,省一行整页宽的高度
+    fig.tight_layout()
     png, pdf = FIGDIR / "fig_pareto.png", FIGDIR / "fig_pareto.pdf"
-    fig.savefig(png); fig.savefig(pdf)
+    # PNG 备选栅格图:按 Springer 组合图要求 ≥600 dpi(正式投稿用矢量 PDF)
+    fig.savefig(png, dpi=600); fig.savefig(pdf)
     print(f"图已生成:{png}\n         {pdf}")
     # 文字版前沿,便于写正文
     for ds, sc in order:
