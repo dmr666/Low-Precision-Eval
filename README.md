@@ -18,6 +18,8 @@ results/    raw result files (one row per evaluation / measurement)
                        model size, threads, input type
   latency_session_*.csv  the two complete measurement sessions kept as evidence (both are 80 rows,
                        each with its own `session` id; they must never be mixed)
+  refs_new.json        machine-readable verification of the references added for the related-work section
+  refs_verify_new.txt  the same check in prose (OpenAlex exact-DOI + Crossref, field by field)
   realtime_budget.md   real-time framing: per-frame budget (33.3 / 16.7 ms), p95 tail and sustained
                        frames per second per four-thread worker, derived from latency.csv
   latency_session_compare.md  cross-session comparison: within-cell spread of the five seed models,

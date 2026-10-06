@@ -1,0 +1,67 @@
+# 论文四 · 新增参考文献核验(OpenAlex 精确 DOI + Crossref 双通道)
+
+## slimneck
+- 预期:Slim-neck by GSConv: a lightweight-design for real-time detector architectures
+- DOI:10.1007/s11554-024-01436-6
+- openalex: Slim-neck by GSConv: a lightweight-design for real-time detector architectures | 2024 | Journal of Real-Time Image Processing |  | Hu-Lin Li | type=article | cited=635
+- crossref: Slim-neck by GSConv: a lightweight-design for real-time detector architectures | 2024 | Journal of Real-Time Image Processing | 21(3) | Li | type=journal-article
+
+## yolov4_defect
+- 预期:A real-time and efficient surface defect detection method based on YOLOv4
+- DOI:10.1007/s11554-023-01333-4
+- openalex: A real-time and efficient surface defect detection method based on YOLOv4 | 2023 | Journal of Real-Time Image Processing |  | Jiansheng Liu | type=article | cited=28
+- crossref: A real-time and efficient surface defect detection method based on YOLOv4 | 2023 | Journal of Real-Time Image Processing | 20(4) | Liu | type=journal-article
+
+## rtdetr_steel
+- 预期:Steel surface defect detection based on the lightweight improved RT-DETR algorithm
+- DOI:10.1007/s11554-024-01611-9
+- openalex: Steel surface defect detection based on the lightweight improved RT-DETR algorithm | 2024 | Journal of Real-Time Image Processing |  | Haojie Mao | type=article | cited=28
+- crossref: Steel surface defect detection based on the lightweight improved RT-DETR algorithm | 2024 | Journal of Real-Time Image Processing | 22(1) | Mao | type=journal-article
+
+## quant_survey
+- 预期:A Comprehensive Survey on Model Quantization for Deep Neural Networks in Image Classification
+- DOI:10.1145/3623402
+- openalex: A Comprehensive Survey on Model Quantization for Deep Neural Networks in Image Classification | 2023 | ACM Transactions on Intelligent Systems and Technology |  | Babak Rokh | type=article | cited=231
+- crossref: A Comprehensive Survey on Model Quantization for Deep Neural Networks in Image Classification | 2023 | ACM Transactions on Intelligent Systems and Technology | 14(6):1-50 | Rokh | type=journal-article
+
+## gholami
+- 预期:A Survey of Quantization Methods for Efficient Neural Network Inference
+- DOI:10.1201/9781003162810-13
+- openalex: A Survey of Quantization Methods for Efficient Neural Network Inference | 2022 | Chapman & Hall/CRC eBooks |  | Amir Gholami | type=book-chapter | cited=1150
+- crossref: A Survey of Quantization Methods for Efficient Neural Network Inference | 2022 | Low-Power Computer Vision | :291-326 | Gholami | type=book-chapter
+
+## krishnamoorthi
+- 预期:Quantizing deep convolutional networks for efficient inference: A whitepaper
+- DOI:10.48550/arxiv.1806.08342
+- openalex: Quantizing deep convolutional networks for efficient inference: A whitepaper | 2018 | arXiv (Cornell University) |  | Raghuraman Krishnamoorthi | type=preprint | cited=749
+- crossref: 查不到(注意:查不到 ≠ 文献是假的,换通道再试)
+
+## fqnet
+- 预期:Fully Quantized Network for Object Detection
+- DOI:10.1109/cvpr.2019.00292
+- openalex: Fully Quantized Network for Object Detection | 2019 | IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings |  | Rundong Li | type=conference-paper | cited=221
+- crossref: Fully Quantized Network for Object Detection | 2019 | 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) | :2805-2814 | Li | type=proceedings-article
+
+## smallobj_survey
+- 预期:Towards Large-Scale Small Object Detection: Survey and Benchmarks
+- DOI:10.1109/tpami.2023.3290594
+- openalex: Towards Large-Scale Small Object Detection: Survey and Benchmarks | 2023 | IEEE Transactions on Pattern Analysis and Machine Intelligence |  | Gong Cheng | type=article | cited=659
+- crossref: Towards Large-Scale Small Object Detection: Survey and Benchmarks | 2023 | IEEE Transactions on Pattern Analysis and Machine Intelligence | :1-20 | Cheng | type=journal-article
+
+## variance_bench
+- 预期:Accounting for Variance in Machine Learning Benchmarks
+- DOI:10.48550/arxiv.2103.03098
+- openalex: Accounting for Variance in Machine Learning Benchmarks | 2021 | arXiv (Cornell University) |  | Xavier Bouthillier | type=preprint | cited=40
+- crossref: 查不到(注意:查不到 ≠ 文献是假的,换通道再试)
+
+## tail_at_scale
+- 预期:The Tail at Scale
+- DOI:10.1145/2408776.2408794
+- openalex: The tail at scale | 2013 | Communications of the ACM |  | Jeffrey Dean | type=article | cited=1863
+- crossref: The tail at scale | 2013 | Communications of the ACM | 56(2):74-80 | Dean | type=journal-article
+
+## mlperf
+- 预期:MLPerf Inference Benchmark
+- DOI:10.1109/isca45697.2020.00045
+- openalex: MLPerf Inference Benchmark | 2020 | ACM/IEEE International Symposium on Computer Architecture (ISCA) |  | Vijay Janapa Reddi | type=conference-paper | cited=518
+- crossref: MLPerf Inference Benchmark | 2020 | 2020 ACM/IEEE 47th Annual International Symposium on Computer Architecture (ISCA) | :446-459 | Reddi | type=proceedings-article

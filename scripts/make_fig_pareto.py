@@ -71,7 +71,7 @@ def main() -> None:
     rows = load_rows()
     # 最终以 174 mm(整页宽)排版,figsize 就取 6.8 in,缩放比≈1.0 → 图内字号即最终字号(Springer 要求 8–12 pt)
     # 单栏排版:栏宽 85 mm ≈ 3.35 in,figsize 取 3.4 in → 缩放≈1.0,图内字号即最终字号
-    fig, axes = plt.subplots(2, 2, figsize=(3.4, 3.3), dpi=150)
+    fig, axes = plt.subplots(2, 2, figsize=(3.4, 3.0), dpi=150)
     order = [("gc10", "n"), ("gc10", "s"), ("neu", "n"), ("neu", "s")]
     for ax, (ds, sc) in zip(axes.ravel(), order):
         pts = [r for r in rows if r["dataset"] == ds and r["scale"] == sc]

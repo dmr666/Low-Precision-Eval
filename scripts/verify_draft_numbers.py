@@ -27,6 +27,7 @@ for p in [C.OUT / "numbers_sheet.md", C.OUT / "paper_tables.md", C.OUT / "si_tab
           C.OUT / "tables.md", C.OUT / "seed_extension_report.md",
           C.OUT / "latency_session_compare.md",
           C.OUT / "realtime_budget.md",
+          C.OUT / "refs_new.json",
           C.OUT / "latency_session_20261006_1803.csv",
           C.OUT / "latency_session_20261006_2119.csv",
           C.PROJ / "_log_fix2.log", C.PROJ / "_log_latency_all.log",

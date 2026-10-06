@@ -1,0 +1,580 @@
+{
+ "slimneck": {
+  "title_expected": "Slim-neck by GSConv: a lightweight-design for real-time detector architectures",
+  "doi": "10.1007/s11554-024-01436-6",
+  "openalex": {
+   "title": "Slim-neck by GSConv: a lightweight-design for real-time detector architectures",
+   "year": 2024,
+   "venue": "Journal of Real-Time Image Processing",
+   "type": "article",
+   "first_author": "Hu-Lin Li",
+   "cited": 635
+  },
+  "openalex_biblio": {
+   "volume": "21",
+   "issue": "3",
+   "first_page": null,
+   "last_page": null
+  },
+  "openalex_type": "article",
+  "authors_oa": [
+   "Hu-Lin Li",
+   "Jun Li",
+   "Hanbing Wei",
+   "Zheng Liu",
+   "Zhenfei Zhan",
+   "Qiliang Ren"
+  ],
+  "crossref": {
+   "title": "Slim-neck by GSConv: a lightweight-design for real-time detector architectures",
+   "year": 2024,
+   "venue": "Journal of Real-Time Image Processing",
+   "volume": "21",
+   "issue": "3",
+   "page": null,
+   "type": "journal-article",
+   "first_author": "Li",
+   "authors_cr": [
+    "Li Hulin",
+    "Li Jun",
+    "Wei Hanbing",
+    "Liu Zheng",
+    "Zhan Zhenfei",
+    "Ren Qiliang"
+   ]
+  }
+ },
+ "yolov4_defect": {
+  "title_expected": "A real-time and efficient surface defect detection method based on YOLOv4",
+  "doi": "10.1007/s11554-023-01333-4",
+  "openalex": {
+   "title": "A real-time and efficient surface defect detection method based on YOLOv4",
+   "year": 2023,
+   "venue": "Journal of Real-Time Image Processing",
+   "type": "article",
+   "first_author": "Jiansheng Liu",
+   "cited": 28
+  },
+  "openalex_biblio": {
+   "volume": "20",
+   "issue": "4",
+   "first_page": null,
+   "last_page": null
+  },
+  "openalex_type": "article",
+  "authors_oa": [
+   "Jiansheng Liu",
+   "Guolong Cui",
+   "Chengdi Xiao"
+  ],
+  "crossref": {
+   "title": "A real-time and efficient surface defect detection method based on YOLOv4",
+   "year": 2023,
+   "venue": "Journal of Real-Time Image Processing",
+   "volume": "20",
+   "issue": "4",
+   "page": null,
+   "type": "journal-article",
+   "first_author": "Liu",
+   "authors_cr": [
+    "Liu Jiansheng",
+    "Cui Guolong",
+    "Xiao Chengdi"
+   ]
+  }
+ },
+ "rtdetr_steel": {
+  "title_expected": "Steel surface defect detection based on the lightweight improved RT-DETR algorithm",
+  "doi": "10.1007/s11554-024-01611-9",
+  "openalex": {
+   "title": "Steel surface defect detection based on the lightweight improved RT-DETR algorithm",
+   "year": 2024,
+   "venue": "Journal of Real-Time Image Processing",
+   "type": "article",
+   "first_author": "Haojie Mao",
+   "cited": 28
+  },
+  "openalex_biblio": {
+   "volume": "22",
+   "issue": "1",
+   "first_page": null,
+   "last_page": null
+  },
+  "openalex_type": "article",
+  "authors_oa": [
+   "Haojie Mao",
+   "Yongwang Gong"
+  ],
+  "crossref": {
+   "title": "Steel surface defect detection based on the lightweight improved RT-DETR algorithm",
+   "year": 2024,
+   "venue": "Journal of Real-Time Image Processing",
+   "volume": "22",
+   "issue": "1",
+   "page": null,
+   "type": "journal-article",
+   "first_author": "Mao",
+   "authors_cr": [
+    "Mao Haojie",
+    "Gong Yongwang"
+   ]
+  }
+ },
+ "quant_survey": {
+  "title_expected": "A Comprehensive Survey on Model Quantization for Deep Neural Networks in Image Classification",
+  "doi": "10.1145/3623402",
+  "openalex": {
+   "title": "A Comprehensive Survey on Model Quantization for Deep Neural Networks in Image Classification",
+   "year": 2023,
+   "venue": "ACM Transactions on Intelligent Systems and Technology",
+   "type": "article",
+   "first_author": "Babak Rokh",
+   "cited": 231
+  },
+  "openalex_biblio": {
+   "volume": "14",
+   "issue": "6",
+   "first_page": "1",
+   "last_page": "50"
+  },
+  "openalex_type": "article",
+  "authors_oa": [
+   "Babak Rokh",
+   "Ali Azarpeyvand",
+   "Alireza Khanteymoori"
+  ],
+  "crossref": {
+   "title": "A Comprehensive Survey on Model Quantization for Deep Neural Networks in Image Classification",
+   "year": 2023,
+   "venue": "ACM Transactions on Intelligent Systems and Technology",
+   "volume": "14",
+   "issue": "6",
+   "page": "1-50",
+   "type": "journal-article",
+   "first_author": "Rokh",
+   "authors_cr": [
+    "Rokh Babak",
+    "Azarpeyvand Ali",
+    "Khanteymoori Alireza"
+   ]
+  }
+ },
+ "gholami": {
+  "title_expected": "A Survey of Quantization Methods for Efficient Neural Network Inference",
+  "doi": "10.1201/9781003162810-13",
+  "openalex": {
+   "title": "A Survey of Quantization Methods for Efficient Neural Network Inference",
+   "year": 2022,
+   "venue": "Chapman & Hall/CRC eBooks",
+   "type": "book-chapter",
+   "first_author": "Amir Gholami",
+   "cited": 1150
+  },
+  "openalex_biblio": {
+   "volume": null,
+   "issue": null,
+   "first_page": "291",
+   "last_page": "326"
+  },
+  "openalex_type": "book-chapter",
+  "authors_oa": [
+   "Amir Gholami",
+   "Sehoon Kim",
+   "Zhen Dong",
+   "Zhewei Yao",
+   "Michael W. Mahoney",
+   "Kurt Keutzer"
+  ],
+  "crossref": {
+   "title": "A Survey of Quantization Methods for Efficient Neural Network Inference",
+   "year": 2022,
+   "venue": "Low-Power Computer Vision",
+   "volume": null,
+   "issue": null,
+   "page": "291-326",
+   "type": "book-chapter",
+   "first_author": "Gholami",
+   "authors_cr": [
+    "Gholami Amir",
+    "Kim Sehoon",
+    "Dong Zhen",
+    "Yao Zhewei",
+    "Mahoney Michael W.",
+    "Keutzer Kurt"
+   ]
+  }
+ },
+ "krishnamoorthi": {
+  "title_expected": "Quantizing deep convolutional networks for efficient inference: A whitepaper",
+  "doi": "10.48550/arxiv.1806.08342",
+  "openalex": {
+   "title": "Quantizing deep convolutional networks for efficient inference: A whitepaper",
+   "year": 2018,
+   "venue": "arXiv (Cornell University)",
+   "type": "preprint",
+   "first_author": "Raghuraman Krishnamoorthi",
+   "cited": 749
+  },
+  "openalex_biblio": {
+   "volume": null,
+   "issue": null,
+   "first_page": null,
+   "last_page": null
+  },
+  "openalex_type": "preprint",
+  "authors_oa": [
+   "Raghuraman Krishnamoorthi"
+  ]
+ },
+ "fqnet": {
+  "title_expected": "Fully Quantized Network for Object Detection",
+  "doi": "10.1109/cvpr.2019.00292",
+  "openalex": {
+   "title": "Fully Quantized Network for Object Detection",
+   "year": 2019,
+   "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+   "type": "conference-paper",
+   "first_author": "Rundong Li",
+   "cited": 221
+  },
+  "openalex_biblio": {
+   "volume": null,
+   "issue": null,
+   "first_page": "2805",
+   "last_page": "2814"
+  },
+  "openalex_type": "conference-paper",
+  "authors_oa": [
+   "Rundong Li",
+   "Yan Wang",
+   "Feng Liang",
+   "Hongwei Qin",
+   "Junjie Yan",
+   "Rui Fan"
+  ],
+  "crossref": {
+   "title": "Fully Quantized Network for Object Detection",
+   "year": 2019,
+   "venue": "2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+   "volume": null,
+   "issue": null,
+   "page": "2805-2814",
+   "type": "proceedings-article",
+   "first_author": "Li",
+   "authors_cr": [
+    "Li Rundong",
+    "Wang Yan",
+    "Liang Feng",
+    "Qin Hongwei",
+    "Yan Junjie",
+    "Fan Rui"
+   ]
+  }
+ },
+ "smallobj_survey": {
+  "title_expected": "Towards Large-Scale Small Object Detection: Survey and Benchmarks",
+  "doi": "10.1109/tpami.2023.3290594",
+  "openalex": {
+   "title": "Towards Large-Scale Small Object Detection: Survey and Benchmarks",
+   "year": 2023,
+   "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+   "type": "article",
+   "first_author": "Gong Cheng",
+   "cited": 659
+  },
+  "openalex_biblio": {
+   "volume": "45",
+   "issue": "11",
+   "first_page": "1",
+   "last_page": "20"
+  },
+  "openalex_type": "article",
+  "authors_oa": [
+   "Gong Cheng",
+   "Xiang Yuan",
+   "Xiwen Yao",
+   "Kebing Yan",
+   "Qinghua Zeng",
+   "Xingxing Xie",
+   "Junwei Han"
+  ],
+  "crossref": {
+   "title": "Towards Large-Scale Small Object Detection: Survey and Benchmarks",
+   "year": 2023,
+   "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+   "volume": null,
+   "issue": null,
+   "page": "1-20",
+   "type": "journal-article",
+   "first_author": "Cheng",
+   "authors_cr": [
+    "Cheng Gong",
+    "Yuan Xiang",
+    "Yao Xiwen",
+    "Yan Kebing",
+    "Zeng Qinghua",
+    "Xie Xingxing",
+    "Han Junwei"
+   ]
+  }
+ },
+ "variance_bench": {
+  "title_expected": "Accounting for Variance in Machine Learning Benchmarks",
+  "doi": "10.48550/arxiv.2103.03098",
+  "openalex": {
+   "title": "Accounting for Variance in Machine Learning Benchmarks",
+   "year": 2021,
+   "venue": "arXiv (Cornell University)",
+   "type": "preprint",
+   "first_author": "Xavier Bouthillier",
+   "cited": 40
+  },
+  "openalex_biblio": {
+   "volume": null,
+   "issue": null,
+   "first_page": null,
+   "last_page": null
+  },
+  "openalex_type": "preprint",
+  "authors_oa": [
+   "Xavier Bouthillier",
+   "Pierre Delaunay",
+   "Mirko Bronzi",
+   "Assya Trofimov",
+   "Brennan Nichyporuk",
+   "Justin Szeto",
+   "Naz Sepah",
+   "Edward Raff",
+   "Kanika Madan",
+   "Vikram Voleti",
+   "Samira Ebrahimi Kahou",
+   "Vincent Michalski",
+   "Dmitriy Serdyuk",
+   "Tal Arbel",
+   "Pal, Chris",
+   "Gaël Varoquaux",
+   "Vincent, Pascal"
+  ]
+ },
+ "tail_at_scale": {
+  "title_expected": "The Tail at Scale",
+  "doi": "10.1145/2408776.2408794",
+  "openalex": {
+   "title": "The tail at scale",
+   "year": 2013,
+   "venue": "Communications of the ACM",
+   "type": "article",
+   "first_author": "Jeffrey Dean",
+   "cited": 1863
+  },
+  "openalex_biblio": {
+   "volume": "56",
+   "issue": "2",
+   "first_page": "74",
+   "last_page": "80"
+  },
+  "openalex_type": "article",
+  "authors_oa": [
+   "Jeffrey Dean",
+   "Luiz André Barroso"
+  ],
+  "crossref": {
+   "title": "The tail at scale",
+   "year": 2013,
+   "venue": "Communications of the ACM",
+   "volume": "56",
+   "issue": "2",
+   "page": "74-80",
+   "type": "journal-article",
+   "first_author": "Dean",
+   "authors_cr": [
+    "Dean Jeffrey",
+    "Barroso Luiz André"
+   ]
+  }
+ },
+ "mlperf": {
+  "title_expected": "MLPerf Inference Benchmark",
+  "doi": "10.1109/isca45697.2020.00045",
+  "openalex": {
+   "title": "MLPerf Inference Benchmark",
+   "year": 2020,
+   "venue": "ACM/IEEE International Symposium on Computer Architecture (ISCA)",
+   "type": "conference-paper",
+   "first_author": "Vijay Janapa Reddi",
+   "cited": 518
+  },
+  "openalex_biblio": {
+   "volume": null,
+   "issue": null,
+   "first_page": "446",
+   "last_page": "459"
+  },
+  "openalex_type": "conference-paper",
+  "authors_oa": [
+   "Vijay Janapa Reddi",
+   "Christine Cheng",
+   "David E. Kanter",
+   "Peter R. Mattson",
+   "Guenther Schmuelling",
+   "Carole-Jean Wu",
+   "Brian Anderson",
+   "Maximilien B. Breughe",
+   "Mark Charlebois",
+   "William Chou",
+   "Ramesh Babu Chukka",
+   "Cody Coleman",
+   "Sam Davis",
+   "Deng Pan",
+   "Gregory Diamos",
+   "Jared Duke",
+   "Dave Fick",
+   "Joshua Gardner",
+   "Itay Hubara",
+   "Sachin Idgunji",
+   "Thomas B. Jablin",
+   "Jeff Jiao",
+   "Tom St. John",
+   "Pankaj Kanwar",
+   "David Lee",
+   "Jeffery Liao",
+   "Anton Lokhmotov",
+   "Francisco Massa",
+   "Peng Meng",
+   "Paulius Micikevicius",
+   "Colin Osborne",
+   "Gennady Pekhimenko",
+   "Arun Tejusve Raghunath Rajan",
+   "Dilip Sequeira",
+   "Ashish Sirasao",
+   "Fei Sun",
+   "Hanlin Tang",
+   "Michael Thomson",
+   "Frank Wei",
+   "Ephrem Wu",
+   "Lingjie Xu",
+   "Kôichi Yamada",
+   "Bing Yu",
+   "George Yuan",
+   "Aaron Zhong",
+   "Peizhao Zhang",
+   "Yuchen Zhou"
+  ],
+  "crossref": {
+   "title": "MLPerf Inference Benchmark",
+   "year": 2020,
+   "venue": "2020 ACM/IEEE 47th Annual International Symposium on Computer Architecture (ISCA)",
+   "volume": null,
+   "issue": null,
+   "page": "446-459",
+   "type": "proceedings-article",
+   "first_author": "Reddi",
+   "authors_cr": [
+    "Reddi Vijay Janapa",
+    "Cheng Christine",
+    "Kanter David",
+    "Mattson Peter",
+    "Schmuelling Guenther",
+    "Wu Carole-Jean",
+    "Anderson Brian",
+    "Breughe Maximilien",
+    "Charlebois Mark",
+    "Chou William",
+    "Chukka Ramesh",
+    "Coleman Cody",
+    "Davis Sam",
+    "Deng Pan",
+    "Diamos Greg",
+    "Duke Jared",
+    "Fick Dave",
+    "Gardner J. Scott",
+    "Hubara Itay",
+    "Idgunji Sachin",
+    "Jablin Thomas B.",
+    "Jiao Jeff",
+    "John Tom St.",
+    "Kanwar Pankaj",
+    "Lee David",
+    "Liao Jeffery",
+    "Lokhmotov Anton",
+    "Massa Francisco",
+    "Meng Peng",
+    "Micikevicius Paulius",
+    "Osborne Colin",
+    "Pekhimenko Gennady",
+    "Rajan Arun Tejusve Raghunath",
+    "Sequeira Dilip",
+    "Sirasao Ashish",
+    "Sun Fei",
+    "Tang Hanlin",
+    "Thomson Michael",
+    "Wei Frank",
+    "Wu Ephrem",
+    "Xu Lingjie",
+    "Yamada Koichi",
+    "Yu Bing",
+    "Yuan George",
+    "Zhong Aaron",
+    "Zhang Peizhao",
+    "Zhou Yuchen"
+   ]
+  }
+ },
+ "holm1979": {
+  "title_expected": "A Simple Sequentially Rejective Multiple Test Procedure",
+  "doi": "10.2307/4615733",
+  "openalex": {
+   "title": "A Simple Sequentially Rejective Multiple Test Procedure",
+   "year": 1979,
+   "venue": "Scandinavian Journal of Statistics",
+   "type": "article",
+   "first_author": "Sture Holm",
+   "cited": 21871
+  },
+  "openalex_biblio": {
+   "volume": "6",
+   "issue": null,
+   "first_page": "65",
+   "last_page": "70"
+  },
+  "openalex_type": "article",
+  "authors_oa": [
+   "Sture Holm"
+  ]
+ },
+ "dietterich1998": {
+  "title_expected": "Approximate Statistical Tests for Comparing Supervised Classification Learning Algorithms",
+  "doi": "10.1162/089976698300017197",
+  "openalex": {
+   "title": "Approximate Statistical Tests for Comparing Supervised Classification Learning Algorithms",
+   "year": 1998,
+   "venue": "Neural Computation",
+   "type": "article",
+   "first_author": "Thomas G. Dietterich",
+   "cited": 3824
+  },
+  "openalex_biblio": {
+   "volume": "10",
+   "issue": "7",
+   "first_page": "1895",
+   "last_page": "1923"
+  },
+  "openalex_type": "article",
+  "authors_oa": [
+   "Thomas G. Dietterich"
+  ],
+  "crossref": {
+   "title": "Approximate Statistical Tests for Comparing Supervised Classification Learning Algorithms",
+   "year": 1998,
+   "venue": "Neural Computation",
+   "volume": "10",
+   "issue": "7",
+   "page": "1895-1923",
+   "type": "journal-article",
+   "first_author": "Dietterich",
+   "authors_cr": [
+    "Dietterich Thomas G."
+   ]
+  }
+ }
+}
