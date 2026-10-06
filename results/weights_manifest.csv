@@ -1,0 +1,41 @@
+file,dataset,scale,tag,seed,source_tar,member,bytes
+neu_s_base_seed2024.pt,neu,s,base,2024,neu_main_weights_20261002.tar,defect/runs/v_base_seed2024/weights/best.pt,22543459
+neu_s_base_seed42.pt,neu,s,base,42,neu_main_weights_20261002.tar,defect/runs/v_base_seed42/weights/best.pt,22543459
+neu_s_base_seed7.pt,neu,s,base,7,neu_main_weights_20261002.tar,defect/runs/v_base_seed7/weights/best.pt,22543459
+neu_n_base_seed2024.pt,neu,n,base,2024,neu_main_weights_20261002.tar,defect/runs_nano/v_base_seed2024/weights/best.pt,6272611
+neu_n_base_seed42.pt,neu,n,base,42,neu_main_weights_20261002.tar,defect/runs_nano/v_base_seed42/weights/best.pt,6272547
+neu_n_base_seed7.pt,neu,n,base,7,neu_main_weights_20261002.tar,defect/runs_nano/v_base_seed7/weights/best.pt,6272547
+neu_s_base_seed13.pt,neu,s,base,13,revision_weights_20261002.tar,defect/runs/v_base_seed13/weights/best.pt,22543459
+neu_s_base_seed99.pt,neu,s,base,99,revision_weights_20261002.tar,defect/runs/v_base_seed99/weights/best.pt,22543459
+neu_s_base_seed2024.pt,neu,s,base,2024,revision_weights_20261002.tar,defect/runs_e300n/v_base_seed2024/weights/best.pt,22556323
+neu_s_base_seed42.pt,neu,s,base,42,revision_weights_20261002.tar,defect/runs_e300n/v_base_seed42/weights/best.pt,22556323
+neu_s_base_seed7.pt,neu,s,base,7,revision_weights_20261002.tar,defect/runs_e300n/v_base_seed7/weights/best.pt,22556323
+neu_s_base_seed2024.pt,neu,s,base,2024,revision_weights_20261002.tar,defect/runs_scratch_n/v_base_seed2024/weights/best.pt,6272995
+neu_s_base_seed42.pt,neu,s,base,42,revision_weights_20261002.tar,defect/runs_scratch_n/v_base_seed42/weights/best.pt,6272931
+neu_s_base_seed7.pt,neu,s,base,7,revision_weights_20261002.tar,defect/runs_scratch_n/v_base_seed7/weights/best.pt,6272931
+neu_s_base_seed42.pt,neu,s,base,42,revision_weights_20261002.tar,defect/runs_scratch_n300/v_base_seed42/weights/best.pt,6285795
+neu_s_base_seed2024.pt,neu,s,base,2024,revision_weights_20261002.tar,defect/runs_scratch_s/v_base_seed2024/weights/best.pt,22543843
+neu_s_base_seed42.pt,neu,s,base,42,revision_weights_20261002.tar,defect/runs_scratch_s/v_base_seed42/weights/best.pt,22543843
+neu_s_base_seed7.pt,neu,s,base,7,revision_weights_20261002.tar,defect/runs_scratch_s/v_base_seed7/weights/best.pt,22543843
+neu_s_base_seed42.pt,neu,s,base,42,revision_weights_20261002.tar,defect/runs_scratch_s300/v_base_seed42/weights/best.pt,22556707
+gc10_s_base_seed13.pt,gc10,s,base,13,revision_weights_20261002.tar,defect_gc10/runs/v_base_seed13/weights/best.pt,22520163
+gc10_s_base_seed99.pt,gc10,s,base,99,revision_weights_20261002.tar,defect_gc10/runs/v_base_seed99/weights/best.pt,22520163
+gc10_s_base_seed2024.pt,gc10,s,base,2024,revision_weights_20261002.tar,defect_gc10/runs_scratch_n/v_base_seed2024/weights/best.pt,6248163
+gc10_s_base_seed42.pt,gc10,s,base,42,revision_weights_20261002.tar,defect_gc10/runs_scratch_n/v_base_seed42/weights/best.pt,6248163
+gc10_s_base_seed7.pt,gc10,s,base,7,revision_weights_20261002.tar,defect_gc10/runs_scratch_n/v_base_seed7/weights/best.pt,6248163
+gc10_s_base_seed2024.pt,gc10,s,base,2024,revision_weights_20261002.tar,defect_gc10/runs_scratch_s/v_base_seed2024/weights/best.pt,22520611
+gc10_s_base_seed42.pt,gc10,s,base,42,revision_weights_20261002.tar,defect_gc10/runs_scratch_s/v_base_seed42/weights/best.pt,22520611
+gc10_s_base_seed7.pt,gc10,s,base,7,revision_weights_20261002.tar,defect_gc10/runs_scratch_s/v_base_seed7/weights/best.pt,22520611
+gc10_s_base_seed42.pt,gc10,s,base,42,weights_gc10.tar.gz,runs/v_base_seed42/weights/best.pt,22520163
+gc10_s_base_seed7.pt,gc10,s,base,7,weights_gc10.tar.gz,runs/v_base_seed7/weights/best.pt,22520163
+gc10_s_base_seed2024.pt,gc10,s,base,2024,weights_gc10.tar.gz,runs/v_base_seed2024/weights/best.pt,22520163
+gc10_n_base_seed42.pt,gc10,n,base,42,weights_gc10.tar.gz,runs_nano/v_base_seed42/weights/best.pt,6247779
+gc10_n_base_seed7.pt,gc10,n,base,7,weights_gc10.tar.gz,runs_nano/v_base_seed7/weights/best.pt,6247779
+gc10_n_base_seed2024.pt,gc10,n,base,2024,weights_gc10.tar.gz,runs_nano/v_base_seed2024/weights/best.pt,6247779
+neu_s_base_seed42.pt,neu,s,base,42,weights_neu.tar.gz,runs/v_base_seed42/weights/best.pt,22543459
+neu_s_base_seed7.pt,neu,s,base,7,weights_neu.tar.gz,runs/v_base_seed7/weights/best.pt,22543459
+neu_s_base_seed2024.pt,neu,s,base,2024,weights_neu.tar.gz,runs/v_base_seed2024/weights/best.pt,22543459
+gc10_n_base_seed13.pt,gc10,n,base,13,cloud GPU:train_nano_extra_seeds.py (2026-10-06),"v_base_seed13/weights/best.pt (args.yaml 同目录, 已审计 47/0)",6247779
+gc10_n_base_seed99.pt,gc10,n,base,99,cloud GPU:train_nano_extra_seeds.py (2026-10-06),"v_base_seed99/weights/best.pt (args.yaml 同目录, 已审计 47/0)",6247779
+neu_n_base_seed13.pt,neu,n,base,13,cloud GPU:train_nano_extra_seeds.py (2026-10-06),"v_base_seed13/weights/best.pt (args.yaml 同目录, 已审计 47/0)",6272547
+neu_n_base_seed99.pt,neu,n,base,99,cloud GPU:train_nano_extra_seeds.py (2026-10-06),"v_base_seed99/weights/best.pt (args.yaml 同目录, 已审计 47/0)",6272547

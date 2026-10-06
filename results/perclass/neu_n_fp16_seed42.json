@@ -1,0 +1,34 @@
+{
+ "names": [
+  "crazing",
+  "inclusion",
+  "patches",
+  "pitted_surface",
+  "rolled-in_scale",
+  "scratches"
+ ],
+ "map50_95_per_class": [
+  0.17714,
+  0.42545,
+  0.54895,
+  0.53111,
+  0.26743,
+  0.4379
+ ],
+ "map50_per_class": [
+  0.48239,
+  0.79814,
+  0.92723,
+  0.87343,
+  0.6081,
+  0.90264
+ ],
+ "class_index": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5
+ ]
+}

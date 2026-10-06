@@ -1,0 +1,13 @@
+dataset,scale,seed,calib,mAP50,mAP50_95,lat_median_ms,size_mb,file
+gc10,s,42,val,0.6061,0.28397,274.953,11.527,gc10_s_seed42_int8static_val.onnx
+gc10,s,42,train200,0.60975,0.29331,339.359,11.527,gc10_s_seed42_int8static_train200.onnx
+gc10,s,42,random20,0.6315,0.28388,341.976,11.527,gc10_s_seed42_int8static_random20.onnx
+neu,s,42,val,0.74379,0.38403,339.275,11.525,neu_s_seed42_int8static_val.onnx
+neu,s,42,train200,0.73432,0.38695,336.617,11.525,neu_s_seed42_int8static_train200.onnx
+neu,s,42,random20,0.71571,0.36489,342.594,11.525,neu_s_seed42_int8static_random20.onnx
+gc10,s,42,val,0.6061,0.28397,308.192,11.527,gc10_s_seed42_int8static_val.onnx
+gc10,s,42,train200,0.60975,0.29331,306.913,11.527,gc10_s_seed42_int8static_train200.onnx
+gc10,s,42,random20,0.6315,0.28388,320.235,11.527,gc10_s_seed42_int8static_random20.onnx
+neu,s,42,val,0.74379,0.38403,314.326,11.525,neu_s_seed42_int8static_val.onnx
+neu,s,42,train200,0.73432,0.38695,310.024,11.525,neu_s_seed42_int8static_train200.onnx
+neu,s,42,random20,0.71571,0.36489,333.096,11.525,neu_s_seed42_int8static_random20.onnx
