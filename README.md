@@ -14,6 +14,8 @@ weights/    the twenty baseline checkpoints (minimal, metadata-free), 6.2 MB / 2
 results/    raw result files (one row per evaluation / measurement)
   results.csv          80 rows: per-configuration accuracy (framework and COCOeval metrics)
   latency.csv          80 rows: median CPU latency over 50 runs, one uninterrupted session
+                       (host state is recorded per row via `scripts/host_load.py`, which also gates
+                       a measurement run: absolute milliseconds drift between sessions)
                        (a `session` column records which; never mix rows from different sessions),
                        model size, threads, input type
   latency_session_*.csv  the two complete measurement sessions kept as evidence (both are 80 rows,
@@ -25,7 +27,17 @@ results/    raw result files (one row per evaluation / measurement)
   latency_session_compare.md  cross-session comparison: within-cell spread of the five seed models,
                        interference indicators (max p95/median) and the within-seed ratio agreement
   stats.csv            cross-seed means and standard deviations
-  significance.csv     Welch t vs FP32 with Holm correction (30 comparisons)
+  significance.csv     30 comparisons vs the same-seed FP32: paired (one-sample) t as the primary test
+                       (df = 4) and unpaired Welch as a robustness check, each with Holm correction
+  results_test.csv     60+ rows: the held-out TEST split evaluation (same protocol as results.csv);
+                       split-isolated on purpose - test rows must never mix with the validation rows
+  pipeline_agreement.md  framework-vs-COCO metric agreement per precision family
+  m2_int8_diagnosis.md   operator census of every export (Q/DQ, QLinearConv, ConvInteger) plus the
+                       post-optimisation count, for the Sec. 4.8 export-path check
+  m2_session2_latency.csv / m2_interleave.csv / m2_order_effect.csv
+                       per-variant timings, the interleaved A/B ratios and the measurement-order control
+  m2_profile_summary.md  per-operator ONNX Runtime profiles (float NCHWc kernels vs integer operators)
+  m2_numbers_sheet.md    every number quoted in Sec. 4.8, script-generated
   calib_ablation.csv   calibration-set ablation (validation split / 200 train images / random tensors)
   export_sizes.csv     ONNX file sizes per variant
   weights_manifest.csv provenance of every weight file (source archive + member path)

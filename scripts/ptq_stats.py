@@ -43,6 +43,26 @@ def welch(a: list, b: list):
     return {"t": t, "df": df, "p": p, "diff": ma - mb}
 
 
+def paired_t(deltas: list):
+    """配对单样本 t:对逐种子的 Δ 检验 Δ=0,df = n-1(5 种子 → 4)。
+
+    这是本文设计对应的主检验:Δ 按种子配对构造,消除种子间变异。
+    Welch(非配对、两样本)保留为稳健性检查,不作为主口径。
+    """
+    d = [x for x in deltas if x is not None]
+    n = len(d)
+    if n < 2:
+        return None
+    md = statistics.fmean(d)
+    sd = statistics.stdev(d)
+    if sd == 0:
+        return None
+    t = md / (sd / math.sqrt(n))
+    df = n - 1
+    p = 2 * t_sf(abs(t), df)
+    return {"t": t, "df": df, "p": p, "diff": md, "n": n}
+
+
 def holm(pvals: list) -> list:
     m = len(pvals)
     order = sorted(range(m), key=lambda i: pvals[i])
@@ -89,6 +109,13 @@ def main() -> None:
     sizemap = {(r["dataset"], r["scale"], r["precision"], r["seed"]): fnum(r["size_mb"])
                for r in lat}
 
+    # 逐种子原始值(配对检验必须按 seed 对齐,不能用文件顺序)
+    METRICS = ("mAP50", "mAP50_95", "APs", "APm", "APl", "AP50_s", "AP50_m", "AP50_l")
+    seedval = {}
+    for r in res:
+        seedval[(r["dataset"], r["scale"], r["precision"], str(r["seed"]))] = {
+            m: fnum(r.get(m)) for m in METRICS}
+
     g = defaultdict(lambda: defaultdict(list))
     for r in res:
         key = (r["dataset"], r["scale"], r["precision"])
@@ -130,26 +157,39 @@ def main() -> None:
             base = g.get((ds, sc, "fp32"))
             if not base:
                 continue
-            fam, meta = [], []
+            fam, famw, meta = [], [], []
             for pr in C.PRECISIONS:
                 if pr == "fp32":
                     continue
                 cur = g.get((ds, sc, pr))
                 if not cur:
                     continue
+                seeds = sorted({k[3] for k in seedval if k[:3] == (ds, sc, "fp32")})
                 for m in ("mAP50", "mAP50_95", "APs"):
-                    r = welch(cur.get(m, []), base.get(m, []))
-                    if r:
-                        fam.append(r["p"]); meta.append((pr, m, r))
+                    deltas, cv, bv = [], [], []
+                    for s in seeds:
+                        b = seedval.get((ds, sc, "fp32", s), {}).get(m)
+                        c = seedval.get((ds, sc, pr, s), {}).get(m)
+                        if b is None or c is None:
+                            continue
+                        deltas.append(c - b); cv.append(c); bv.append(b)
+                    rp = paired_t(deltas)
+                    rw = welch(cv, bv)
+                    if rp and rw:
+                        fam.append(rp["p"]); famw.append(rw["p"]); meta.append((pr, m, rp, rw))
             if not fam:
                 continue
-            adj = holm(fam)
-            for (pr, m, r), padj in zip(meta, adj):
+            adj = holm(fam)      # 主检验家族(配对)
+            adjw = holm(famw)    # 稳健性家族(Welch)
+            for (pr, m, rp, rw), padj, padjw in zip(meta, adj, adjw):
                 sig.append({"dataset": ds, "scale": sc, "variant": pr, "metric": m,
-                            "mean_diff": round(r["diff"], 5),
-                            "t": round(r["t"], 3), "df": round(r["df"], 2),
-                            "p": round(r["p"], 4), "p_holm": round(padj, 4),
-                            "signif_holm05": "yes" if padj < 0.05 else "no"})
+                            "mean_diff": round(rp["diff"], 5), "n_pairs": rp["n"],
+                            "t": round(rp["t"], 3), "df": round(rp["df"], 2),
+                            "p": round(rp["p"], 4), "p_holm": round(padj, 4),
+                            "signif_holm05": "yes" if padj < 0.05 else "no",
+                            "t_welch": round(rw["t"], 3), "df_welch": round(rw["df"], 2),
+                            "p_welch": round(rw["p"], 4), "p_holm_welch": round(padjw, 4),
+                            "signif_holm05_welch": "yes" if padjw < 0.05 else "no"})
     sigp = C.OUT / "significance.csv"
     if sig:
         with open(sigp, "w", newline="", encoding="utf-8") as f:
@@ -170,13 +210,14 @@ def main() -> None:
                   "{APs} | {APm} | {APl} | {lat_ms} | {size_mb} |".format(**r))
     md.append("")
     if sig:
-        md.append("## Table 2 · 相对 FP32 的差异与显著性(Welch t + Holm)")
+        md.append("## Table 2 · 相对 FP32 的差异与显著性(主:配对 t df=4;稳健性:Welch)——各自 Holm")
         md.append("")
-        md.append("| dataset | scale | variant | metric | Δ(mean) | t | df | p | p(Holm) | signif@0.05 |")
-        md.append("|---|---|---|---|---|---|---|---|---|---|")
+        md.append("| dataset | scale | variant | metric | Δ(mean) | t_paired | df_paired | p | p(Holm) | signif@0.05 | t_welch | df_welch | p_welch | p(Holm)_welch | signif_welch |")
+        md.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
         for s in sig:
             md.append("| {dataset} | {scale} | {variant} | {metric} | {mean_diff} | {t} | {df} | "
-                      "{p} | {p_holm} | {signif_holm05} |".format(**s))
+                      "{p} | {p_holm} | {signif_holm05} | {t_welch} | {df_welch} | {p_welch} | "
+                      "{p_holm_welch} | {signif_holm05_welch} |".format(**s))
     md.append("")
     md.append("> 口径:逐类/mAP = ultralytics val;APs/APm/APl = pycocotools COCOeval。")
     md.append("> 本文件由 ptq_stats.py 生成;写作时引用 CSV,不复制粘贴手改。")

@@ -141,8 +141,12 @@ def per_class_from_result(r, names: list) -> dict:
 def one(dataset: str, scale: str, seed: int, precision: str, imgsz: int,
         split: str, force: bool, coco_only: bool = False) -> None:
     onnx = C.onnx_path(dataset, scale, seed, precision)
-    results_csv = C.OUT / "results.csv"
-    tag = f"{dataset}_{scale}_{precision}_seed{seed}"
+    # 分区隔离:test 评测必须写自己的 CSV 与自己的 run 目录,
+    # 否则 test 行会混进 val 聚合(results.csv 的跳过判断也不含 split),
+    # 并且会覆盖 val 的 predictions.json / 逐类转储。
+    suffix = "" if split == "val" else f"_{split}"
+    results_csv = C.OUT / (f"results{suffix}.csv")
+    tag = f"{dataset}_{scale}_{precision}_seed{seed}{suffix}"
     pred_json = C.RUNS / tag / "predictions.json"
 
     if coco_only:
@@ -260,7 +264,7 @@ def main() -> None:
             print(f"  [ERR] {d} {s} seed{sd} {p}: {type(e).__name__}: {e}")
             with open(C.OUT / "errors.log", "a", encoding="utf-8") as f:
                 f.write(f"eval {d} {s} {sd} {p}\n{traceback.format_exc()}\n")
-    print(f"\n评测阶段结束,结果:{C.OUT / 'results.csv'}")
+    print(f"\n评测阶段结束,结果:{C.OUT / 'results.csv'}(test 分区写 results_test.csv)")
 
 
 if __name__ == "__main__":

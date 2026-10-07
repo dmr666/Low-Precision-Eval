@@ -27,6 +27,15 @@ for p in [C.OUT / "numbers_sheet.md", C.OUT / "paper_tables.md", C.OUT / "si_tab
           C.OUT / "tables.md", C.OUT / "seed_extension_report.md",
           C.OUT / "latency_session_compare.md",
           C.OUT / "realtime_budget.md",
+          C.OUT / "pipeline_agreement.md",
+          C.OUT / "m2_int8_diagnosis.md",
+          C.OUT / "m2_profile_summary.md",
+          C.OUT / "m2_numbers_sheet.md",
+          C.OUT / "si_table_s7.md",
+          C.OUT / "si_table_s6.md",
+          C.OUT / "m2_interleave.csv",
+          C.OUT / "m2_order_effect.csv",
+          C.OUT / "m2_session2_latency.csv",
           C.OUT / "refs_new.json",
           C.OUT / "latency_session_20261006_1803.csv",
           C.OUT / "latency_session_20261006_2119.csv",
@@ -36,7 +45,7 @@ for p in [C.OUT / "numbers_sheet.md", C.OUT / "paper_tables.md", C.OUT / "si_tab
     if p.exists():
         evidence_text.append(p.read_text(encoding="utf-8", errors="replace"))
 for name in ("results.csv", "latency.csv", "stats.csv", "significance.csv",
-             "calib_ablation.csv", "export_sizes.csv"):
+             "calib_ablation.csv", "export_sizes.csv", "results_test.csv"):
     p = C.OUT / name
     if p.exists():
         evidence_text.append(p.read_text(encoding="utf-8", errors="replace"))

@@ -1,0 +1,159 @@
+
+Coreinfo v4.02 - Dump information on system CPU and memory topology
+Copyright (C) 2008-2026 Mark Russinovich
+Sysinternals - www.sysinternals.com
+
+11th Gen Intel(R) Core(TM) i5-1155G7 @ 2.50GHz
+Intel64 Family 6 Model 140 Stepping 2, GenuineIntel
+
+Microcode signature: 00000016
+Processor signature: 000806C2
+
+Maximum implemented CPUID leaves: 0000001B (Basic), 80000008 (Extended).
+Maximum implemented address width: 48 bits (virtual), 39 bits (physical).
+
+HTT       	*	Hyperthreading enabled
+CET       	*	Supports Control Flow Enforcement Technology
+Kernel CET	-	Kernel-mode CET Enabled
+User CET  	*	User-mode CET Allowed
+X64       	*	Supports 64-bit mode
+SMX       	-	Supports Intel trusted execution
+SKINIT    	-	Supports AMD SKINIT
+SGX       	-	Supports Intel SGX
+NX        	*	Supports no-execute page protection (used by DEP)
+SMEP      	*	Supports Supervisor Mode Execution Prevention
+SMAP      	*	Supports Supervisor Mode Access Prevention
+PAGE1GB   	*	Supports 1 GB large pages
+PAE       	*	Supports > 32-bit physical addresses
+PAT       	*	Supports Page Attribute Table
+PSE       	*	Supports 4 MB pages
+PSE36     	*	Supports > 32-bit address 4 MB pages
+PGE       	*	Supports global bit in page tables
+SS        	*	Supports bus snooping for cache operations
+VME       	*	Supports Virtual-8086 mode
+RDWRFSGSBASE	*	Supports direct GS/FS base access
+FPU       	*	Implements i387 floating point instructions
+MMX       	*	Supports MMX instruction set
+MMXEXT    	-	Implements AMD MMX extensions
+3DNOW     	-	Supports 3DNow! instructions
+3DNOWEXT  	-	Supports 3DNow! extension instructions
+SSE       	*	Supports Streaming SIMD Extensions
+SSE2      	*	Supports Streaming SIMD Extensions 2
+SSE3      	*	Supports Streaming SIMD Extensions 3
+SSSE3     	*	Supports Supplemental SIMD Extensions 3
+SSE4a     	-	Supports Streaming SIMDR Extensions 4a
+SSE4.1    	*	Supports Streaming SIMD Extensions 4.1
+SSE4.2    	*	Supports Streaming SIMD Extensions 4.2
+AES       	*	Supports AES extensions
+AVX       	*	Supports AVX instruction extensions
+AVX2      	*	Supports AVX2 instruction extensions
+AVX-512-F 	*	Supports AVX-512 Foundation instructions
+AVX-512-DQ	*	Supports AVX-512 double and quadword instructions
+AVX-512-IFMA	*	Supports AVX-512 integer Fused multiply-add instructions
+AVX-512-PF	-	Supports AVX-512 prefetch instructions
+AVX-512-ER	-	Supports AVX-512 exponential and reciprocal instructions
+AVX-512-CD	*	Supports AVX-512 conflict detection instructions
+AVX-512-BW	*	Supports AVX-512 byte and word instructions
+AVX-512-VL	*	Supports AVX-512 vector length instructions
+AVX-512-VBMI	*	Supports AVX-512 Vector Byte Manipulation instructions
+AVX-512-VBMI2	*	Supports AVX-512 Vector Byte Manipulation instructions 2
+AVX-512-VNNI	*	Supports AVX-512 Vector Neural Network instructions
+AVX-512-BITALG	*	Supports AVX-512 Bit Algorithms instructions
+AVX-512-VPCNTDQ	*	Supports AVX-512 Vector Population Count Doubleword/Quadword
+AVX-512-4VNNIW	-	Supports AVX-512 4-register Neural Network instructions
+AVX-512-4FMAPS	-	Supports AVX-512 4-register Multiply Accumulation Single precision
+AVX-512-VPISECT	*	Supports AVX-512 Vector Pair Intersection to a Pair of Mask Registers
+AVX-512-FP16	-	Supports AVX-512 half-precision floating-point instructions
+AVX-512-BF16	-	Supports AVX-512 BFloat16 instructions
+SHA       	*	Supports SHA instruction extensions
+GFNI      	*	Supports Galois Field New Instructions
+VAES      	*	Supports Vector AES instructions
+VPCLMULQDQ	*	Supports Vector PCLMULQDQ instruction
+CLWB      	*	Supports Cache Line Write Back
+UMIP      	*	Supports User-Mode Instruction Prevention
+WAITPKG   	-	Supports TPAUSE/UMONITOR/UMWAIT instructions
+RDPID     	*	Supports Read Processor ID instruction
+MOVDIRI   	*	Supports Move Doubleword as Direct Store
+MOVDIR64B 	*	Supports Move 64 Bytes as Direct Store
+AVX-VNNI  	-	Supports VEX-encoded VNNI instructions
+SERIALIZE 	-	Supports SERIALIZE instruction
+CLDEMOTE  	-	Supports Cache Line Demote instruction
+HYBRID    	-	Supports hybrid processor topology
+TSXLDTRK  	-	Supports TSX Suspend Load Address Tracking
+UINTR     	-	Supports User Interrupts
+PCONFIG   	-	Supports Platform Configuration instruction
+AMX-BF16  	-	Supports Advanced Matrix Extensions BFloat16
+AMX-TILE  	-	Supports Advanced Matrix Extensions Tile architecture
+AMX-INT8  	-	Supports Advanced Matrix Extensions Int8
+ENQCMD    	-	Supports Enqueue Command instructions
+AVX-IFMA  	-	Supports VEX-encoded Integer FMA instructions
+CMPCCXADD 	-	Supports Compare and Add if Condition is Met
+RAO-INT   	-	Supports Remote Atomic Operations on Integers
+AMX-FP16  	-	Supports AMX half-precision floating-point
+PREFETCHI 	-	Supports Instruction-cache Prefetch instructions
+FMA       	*	Supports FMA extensions using YMM state
+MSR       	*	Implements RDMSR/WRMSR instructions
+MTRR      	*	Supports Memory Type Range Registers
+XSAVE     	*	Supports XSAVE/XRSTOR instructions
+OSXSAVE   	*	Supports XSETBV/XGETBV instructions
+RDRAND    	*	Supports RDRAND instruction
+RDSEED    	*	Supports RDSEED instruction
+CMOV      	*	Supports CMOVcc instruction
+CLFSH     	*	Supports CLFLUSH instruction
+CX8       	*	Supports compare and exchange 8-byte instructions
+CX16      	*	Supports CMPXCHG16B instruction
+BMI1      	*	Supports bit manipulation extensions 1
+BMI2      	*	Supports bit manipulation extensions 2
+ADX       	*	Supports ADCX/ADOX instructions
+DCA       	-	Supports prefetch from memory-mapped device
+F16C      	*	Supports half-precision instruction
+FXSR      	*	Supports FXSAVE/FXSTOR instructions
+FFXSR     	-	Supports optimized FXSAVE/FSRSTOR instruction
+MONITOR   	*	Supports MONITOR and MWAIT instructions
+MOVBE     	*	Supports MOVBE instruction
+ERMSB     	*	Supports Enhanced REP MOVSB/STOSB
+PCLMULDQ  	*	Supports PCLMULDQ instruction
+POPCNT    	*	Supports POPCNT instruction
+LZCNT     	*	Supports LZCNT instruction
+SEP       	*	Supports fast system call instructions
+LAHF-SAHF 	*	Supports LAHF/SAHF instructions in 64-bit mode
+HLE       	-	Supports Hardware Lock Elision instructions
+RTM       	-	Supports Restricted Transactional Memory instructions
+DE        	*	Supports I/O breakpoints including CR4.DE
+DTES64    	*	Can write history of 64-bit branch addresses
+DS        	*	Implements memory-resident debug buffer
+DS-CPL    	-	Supports Debug Store feature with CPL
+PCID      	*	Supports PCIDs and settable CR4.PCIDE
+INVPCID   	*	Supports INVPCID instruction
+PDCM      	*	Supports Performance Capabilities MSR
+RDTSCP    	*	Supports RDTSCP instruction
+TSC       	*	Supports RDTSC instruction
+TSC-DEADLINE	*	Local APIC supports one-shot deadline timer
+TSC-INVARIANT	*	TSC runs at constant rate
+xTPR      	*	Supports disabling task priority messages
+EIST      	*	Supports Enhanced Intel Speedstep
+ACPI      	*	Implements MSR for power management
+TM        	*	Implements thermal monitor circuitry
+TM2       	*	Implements Thermal Monitor 2 control
+APIC      	*	Implements software-accessible local APIC
+x2APIC    	*	Supports x2APIC
+CNXT-ID   	-	L1 data cache mode adaptive or BIOS
+MCE       	*	Supports Machine Check, INT18 and CR4.MCE
+MCA       	*	Implements Machine Check Architecture
+PBE       	*	Supports use of FERR#/PBE# pin
+PSN       	-	Implements 96-bit processor serial number
+HTT       	*	Hyperthreading
+PREFETCHW 	*	PrefetchW instruction support
+HYPERVISOR	*	Hypervisor is present
+VMX       	-	Supports Intel hardware-assisted virtualization
+EPT       	-	Supports Intel extended page tables (SLAT)
+URG       	-	Supports Intel unrestricted guest
+CET       	*	Control Flow Enforcement Technology
+U-CET     	*	User-mode CET Allowed
+K-CET     	-	Kernel-mode CET Enabled
+x86-64-v1 	*	Baseline: CMOV, CX8, FPU, FXSR, MMX, SSE, SSE2
+x86-64-v2 	*	Level 2: CX16, LAHF-SAHF, POPCNT, SSE3, SSE4.1, SSE4.2, SSSE3
+x86-64-v3 	*	Level 3: AVX, AVX2, BMI1, BMI2, F16C, FMA, LZCNT, MOVBE, OSXSAVE
+x86-64-v4 	*	Level 4: AVX-512-F, AVX-512-BW, AVX-512-CD, AVX-512-DQ, AVX-512-VL
+
+PREFETCHW 	*	Supports PREFETCHW instruction

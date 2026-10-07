@@ -36,8 +36,8 @@ def main() -> None:
             v = [r for r in rows if r["dataset"] == ds and r["scale"] == sc and r["precision"] == pr]
             if not v:
                 continue
-            med = st.fmean([float(r["lat_median_ms"]) for r in v])
-            p95 = st.fmean([float(r["lat_p95_ms"]) for r in v])
+            med = st.median([float(r["lat_median_ms"]) for r in v])   # 跨种子中位数:与 Table 4 同口径
+            p95 = st.median([float(r["lat_p95_ms"]) for r in v])
             fps = 1000.0 / p95
             L.append(f"| {ds}-{sc} | {PN[pr]} | {med:.1f} | {p95:.1f} | {med / 33.3:.2f}x | "
                      f"{p95 / 33.3:.2f}x | {fps:.2f} |")
